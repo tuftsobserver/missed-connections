@@ -3,3 +3,38 @@
 /* edit above here for surrounding page elements */
 
 /* edit below here for grid/box elements */
+
+.box {
+	border: solid black 1px;
+}
+
+.grid {
+	list-style: none;
+	padding: 0;
+}
+
+.grid li {
+	display: block;
+	float: left;
+	width: calc(100%/3); /*three columns*/
+	opacity: 0;
+}
+
+.grid li.shown {
+	opacity: 1;
+}
+
+.grid li.animate {
+	-webkit-animation: fadeIn 0.65s ease forwards;
+	animation: fadeIn 0.65s ease forwards;
+}
+
+@-webkit-keyframes fadeIn {
+	0% { }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+	0% { }
+	100% { opacity: 1; }
+}
