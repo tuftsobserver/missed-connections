@@ -33,7 +33,7 @@ $.getJSON(url, function(data) {
             image_num+=1
         }
         //resset image count if get through 3
-        if(image_num == 3){
+        if(image_num > 3){
             image_num = 1; 
         }
     })
