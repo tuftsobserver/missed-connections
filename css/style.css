@@ -8,17 +8,27 @@
 	/* temporary styling so we can see the box boundaries */
 	border: solid black 1px;
 	font-family: 'Playfair Display', sans-serif;
-	background: rgba(146, 186, 225, 0.1)
+	background: rgba(146, 186, 225, 0.15); 
+	text-align: center;
+
 }
 
  .box-title { 
+ 	margin-top: 5%;
  	font-size: 18px;
  	font-weight: 600;
 
  }
 
 .box-story { 
-	font-style: regular; 
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 5%;
+	font-family: 'Georgia';
+	font-weight: 400;
+
+
  }
 
 
@@ -26,15 +36,6 @@
 .grid {
 	/* don't change this! it removes any sort of weird bulleting */
 	list-style: none;
-
-
-	text-align: center;
-	
-	
-	
-	
-	font-weight: 500;
-
 
 	/* the .grid class is applied to a ul tag in our html. this padding:0 clears
 	   the typical padding associated with a ul tag, but it can be changed to whatever we want */
