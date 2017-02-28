@@ -11,10 +11,22 @@ $.getJSON(url, function(data) {
 
     // Pulls all data in from google sheets at once
     var entry = data.feed.entry;
+    var count = 0; 
     $(entry).each(function() {
         // Steps through and combines surrounding html with text for each box
+        count = count + 1;
     	toAdd = html1 + this.gsx$title.$t + html2 + this.gsx$story.$t + html3;
         document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
+    
+        //every 4 elements insert an image
+        if (count == 2) {
+            console.log ('test'); 
+           
+            
+            toAdd = '<li> <div class = "photo"> <div class= "box"> <img src="doodle.png" style="max-height: 100px; max-width: 100px;" alt="a doodle of a question mark"> </div></div></li>' 
+            document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
+            count = 0; 
+        }
     })
 
     // Runs the following AFTER the above function is complete by using 'promise'

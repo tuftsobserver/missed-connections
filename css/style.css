@@ -7,6 +7,7 @@
 .box {
 	/* temporary styling so we can see the box boundaries */
 	border: solid black 1px;
+
 	font-family: 'Playfair Display', sans-serif;
 	background: rgba(146, 186, 225, 0.15); 
 	text-align: center;
@@ -31,7 +32,9 @@
 
  }
 
-
+.photo {
+	
+}
 
 .grid {
 	/* don't change this! it removes any sort of weird bulleting */
@@ -54,6 +57,7 @@
 	/* don't change this! it hides some initial elements so that they fade in when we scroll */
 	opacity: 0;
 
+
 }
 
 .grid li.shown {
@@ -69,6 +73,7 @@
 	-webkit-animation: fadeIn 0.65s ease forwards;
 	animation: fadeIn 0.65s ease forwards;
 }
+
 
 /* don't change these! defines the fadeIn animation used above in the animate class */
 @-webkit-keyframes fadeIn {
