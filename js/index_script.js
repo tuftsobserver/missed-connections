@@ -24,7 +24,7 @@ $.getJSON(url, function(data) {
         //every 2 elements insert an image
 
         if (story_count == 2) {
-            toAdd = '<li> <div class = "photo"> <img src="'+image_num.toString()+'.png" style="max-height: 100px; max-width: 100px;" alt="a doodle"> </div></li>'
+            toAdd = '<li> <div class = "photo"> <img src="images/'+image_num.toString()+'.png" style="max-height: 100px; max-width: 100px;" alt="a doodle"> </div></li>'
             document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
             story_count = 0;
             image_num+=1
