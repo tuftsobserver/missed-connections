@@ -1,6 +1,5 @@
 body {
   font-family: "Playfair Display", serif;
-
 }
 
 #wrapper {
@@ -12,51 +11,38 @@ body {
   max-width: 1000px;
   padding: 1em;
   margin: 0 auto;
-  /*margin: 0;*/
   background color: white;
 }
+
 #title-elems {
   padding-top: 20px;
   padding-bottom: 20px;
-  display: float;
-  clear: left;
 }
 
 h1 {
   margin-bottom: 30px;
-    font-weight: 900;
-    font-style: italic;
-	   font-size: 70px;
-	text-align: center;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 70px;
+  text-align: center;
 }
 
 h2 {
-    font-weight: 400;
-    font-style: italic;
-	  font-size: 20px;
-	text-align: center;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-top: .5em;
-}
-
-h3 {
-  margin-bottom: 6px;
-	   font-weight: 400;
-	    font-size: 15px;
+  margin: .75em auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
   text-align: center;
 }
 
 .return-link {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 a {
   color: inherit;
   text-decoration: underline;
-
 }
 
 a:hover {
@@ -68,29 +54,16 @@ a:hover {
   background: #b0262c; /* WebKit/Blink Browsers */
   color: white;
 }
+
 ::-moz-selection {
   background: #b0262c; /* Gecko Browsers */
   color: white;
 }
 
-/* edit above here for surrounding page elements */
-
-/* edit below here for grid/box elements */
-
 .box {
   background-color: #f6f6f6;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a8a8a8' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-
   border: 1em solid #f6f6f6;
-  text-align: center;
-
-
-}
-
-.photo {
-  text-align: center;
-
-
 }
 
  .box-title {
@@ -101,60 +74,36 @@ a:hover {
  }
 
 .box-story {
-	margin-top: 5%;
-	margin-left: 10%;
-	margin-right: 10%;
-	margin-bottom: 5%;
+  padding: 5% 10%;
 	font-weight: 400;
-
-
  }
-
-
 
 .grid {
 	/* don't change this! it removes any sort of weird bulleting */
 	list-style: none;
-
-	/* the .grid class is applied to a ul tag in our html. this padding:0 clears
-	   the typical padding associated with a ul tag, but it can be changed to whatever we want */
 	padding: 0;
 }
 
 .grid li {
+  width: calc((100% - 6em)/3); /*three columns*/
+  margin: 2em 1em;
+  text-align: center;
 
 	/* don't change this! necessary for masonry to correctly arrange our boxes */
 	display: block;
 	float: left;
-
-	/* this just chooses the column width -- change however you want */
-	width: calc((100% - 6em)/3); /*three columns*/
-
-	/* don't change this! it hides some initial elements so that they fade in when we scroll */
-	opacity: 0;
-
-  margin: 1em;
-
-
+  opacity: 0;
 }
 
-
 .grid li.shown {
-
-	/* don't change this! it makes it so we can see our boxes when they scroll into view  */
 	opacity: 1;
-
 }
 
 .grid li.animate {
-	/* this just affects how our new boxes fade in when we scroll down. Don't delete it, but
-	   feel free to edit to look better */
 	-webkit-animation: fadeIn 0.65s ease forwards;
 	animation: fadeIn 0.65s ease forwards;
 }
 
-
-/* don't change these! defines the fadeIn animation used above in the animate class */
 @-webkit-keyframes fadeIn {
 	0% { }
 	100% { opacity: 1; }
@@ -166,7 +115,6 @@ a:hover {
 }
 
 @media only screen and (max-width: 720px) {
-
     .grid li {
         width: calc((100% - 2em)); /* 1 col */
     }
@@ -177,7 +125,6 @@ a:hover {
 }
 
 @media only screen and (min-width:721px) and (max-width:1000px) {
-
     .grid li {
         width: calc((100% - 4em)/2); /* 2 col */
 

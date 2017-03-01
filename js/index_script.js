@@ -21,18 +21,16 @@ $.getJSON(url, function(data) {
     	toAdd = html1 + this.gsx$title.$t + html2 + this.gsx$story.$t + html3;
         document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
 
-        //every 4 elements insert an image
+        //every 2 elements insert an image
 
         if (story_count == 2) {
-            console.log ('test');
-
-            toAdd = '<li> <div class = "photo"> <img src="'+image_num.toString()+'.png" style="max-height: 100px; max-width: 100px;" alt="a doodle"> </div></li>' 
-            //toAdd = '<li> <div class = "photo"> <div class= "box"> <img src="doodle.png" style="max-height: 100px; max-width: 100px;" alt="a doodle of a question mark"> </div></div></li>'
+            toAdd = '<li> <div class = "photo"> <img src="'+image_num.toString()+'.png" style="max-height: 100px; max-width: 100px;" alt="a doodle"> </div></li>'
             document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
             story_count = 0;
             image_num+=1
         }
-        //resset image count if get through 3
+
+        //reset image count if get through 3
         if(image_num > 3){
             image_num = 1;
         }
@@ -42,6 +40,7 @@ $.getJSON(url, function(data) {
     $(entry).promise().done(function() {
         // AnimOnScroll function uses masonry, classie, and imagesloaded to configure our boxes.
         // credit to http://tympanus.net/Development/GridLoadingEffects/index8.html
+
         new AnimOnScroll(document.getElementById('grid'), {
             minDuration: 0.4,
             maxDuration: 0.7,
