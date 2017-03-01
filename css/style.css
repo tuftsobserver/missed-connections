@@ -9,9 +9,10 @@ body {
 }
 
 #content {
-  padding-right: 200px;
-  padding-left: 200px;
-  margin: 0;
+  max-width: 1000px;
+  padding: 1em;
+  margin: 0 auto;
+  /*margin: 0;*/
   background color: white;
 }
 #title-elems {
@@ -30,10 +31,15 @@ h1 {
 }
 
 h2 {
-    font-weight: 900;
+    font-weight: 400;
     font-style: italic;
-	  font-size: 30px;
+	  font-size: 20px;
 	text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: .5em;
 }
 
 h3 {
@@ -44,11 +50,27 @@ h3 {
 }
 
 .return-link {
-    font-weight: 900;
-    font-style: italic;
-    font-size: 15px;
-    color: black;
-  text-align: center;
+    font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+::selection {
+  background: #b0262c; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: #b0262c; /* Gecko Browsers */
+  color: white;
 }
 
 /* edit above here for surrounding page elements */
@@ -56,23 +78,26 @@ h3 {
 /* edit below here for grid/box elements */
 
 .box {
-	/* temporary styling so we can see the box boundaries */
-	/*border: solid black 1px;*/
+  background-color: #f6f6f6;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a8a8a8' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
 
-  /*margin: 1em;*/
+  border: 1em solid #f6f6f6;
+  text-align: center;
 
-  /*font-family: 'Playfair Display', sans-serif;
-	background: rgba(146, 186, 225, 0.15);
-	text-align: center;*/
+
+}
+
+.photo {
+  text-align: center;
+
 
 }
 
  .box-title {
  	margin-top: 5%;
- 	font-size: 18px;
- 	font-weight: 900;
+ 	font-size: 20px;
+ 	font-weight: 700;
   font-style: italic;
-
  }
 
 .box-story {
@@ -85,9 +110,7 @@ h3 {
 
  }
 
-.photo {
 
-}
 
 .grid {
 	/* don't change this! it removes any sort of weird bulleting */
@@ -110,26 +133,11 @@ h3 {
 	/* don't change this! it hides some initial elements so that they fade in when we scroll */
 	opacity: 0;
 
-  /*background: rgba(146, 186, 225, 0.15);*/
-
-  text-align: center;
-
   margin: 1em;
 
-  background-color: #f6f6f6;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-
-  border: 1em solid #f6f6f6;
 
 }
 
-.box:li {
-  /*background: rgba(146, 186, 225, 0.15);*/
-}
-
-/*.grid li < .photo {
-  background: white;
-}*/
 
 .grid li.shown {
 
@@ -155,4 +163,23 @@ h3 {
 @keyframes fadeIn {
 	0% { }
 	100% { opacity: 1; }
+}
+
+@media only screen and (max-width: 720px) {
+
+    .grid li {
+        width: calc((100% - 2em)); /* 1 col */
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+}
+
+@media only screen and (min-width:721px) and (max-width:1000px) {
+
+    .grid li {
+        width: calc((100% - 4em)/2); /* 2 col */
+
+    }
 }

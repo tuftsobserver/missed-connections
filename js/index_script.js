@@ -12,7 +12,7 @@ $.getJSON(url, function(data) {
     // Pulls all data in from google sheets at once
     var entry = data.feed.entry;
     //added to keep track of the entries
-    var story_count = 0; 
+    var story_count = 0;
     //added to get different images in
     var image_num = 1;
     $(entry).each(function() {
@@ -20,21 +20,21 @@ $.getJSON(url, function(data) {
         story_count = story_count + 1;
     	toAdd = html1 + this.gsx$title.$t + html2 + this.gsx$story.$t + html3;
         document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
-    
+
         //every 4 elements insert an image
-    
+
         if (story_count == 2) {
-            console.log ('test'); 
-           
-            toAdd = '<li> <div class = "photo"> <div class= "box"> <img src="'+image_num.toString()+'.png" style="max-height: 100px; max-width: 100px;" alt="a doodle"> </div></div></li>' 
-            //toAdd = '<li> <div class = "photo"> <div class= "box"> <img src="doodle.png" style="max-height: 100px; max-width: 100px;" alt="a doodle of a question mark"> </div></div></li>' 
+            console.log ('test');
+
+            toAdd = '<li> <div class = "photo"> <img src="'+image_num.toString()+'.png" style="max-height: 100px; max-width: 100px;" alt="a doodle"> </div></li>' 
+            //toAdd = '<li> <div class = "photo"> <div class= "box"> <img src="doodle.png" style="max-height: 100px; max-width: 100px;" alt="a doodle of a question mark"> </div></div></li>'
             document.getElementById("grid").innerHTML = toAdd + document.getElementById("grid").innerHTML;
-            story_count = 0; 
+            story_count = 0;
             image_num+=1
         }
         //resset image count if get through 3
         if(image_num > 3){
-            image_num = 1; 
+            image_num = 1;
         }
     })
 
